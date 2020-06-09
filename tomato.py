@@ -76,9 +76,8 @@ def notify_me(msg):
     # voice notification
     say -v <lang> <msg>
     lang options:
-    - Daniel:       British English
-    - Ting-Ting:    Mandarin
-    - Sin-ji:       Cantonese
+    - Jorim:       British English
+    
     '''
 
     print(msg)
@@ -86,7 +85,7 @@ def notify_me(msg):
         if sys.platform == 'darwin':
             # macos desktop notification
             subprocess.run(['terminal-notifier', '-title', '🍅', '-message', msg])
-            subprocess.run(['say', '-v', 'Daniel', msg])
+            subprocess.run(['say', '-v', 'Jorim', msg])
         elif sys.platform.startswith('linux'):
             # ubuntu desktop notification
             subprocess.Popen(["notify-send", '🍅', msg])
